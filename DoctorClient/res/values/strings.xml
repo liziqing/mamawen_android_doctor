@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="version">V 0.5.040301</string>
+    <string name="app_name">医生端</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="search">搜索</string>
+	<string name="forget"><u>忘记密码</u></string>
+	<string name="regist"><u>注册</u></string>
+	<string name="unset">未设置</string>
+	<string name="edit">编辑</string>
+	<string name="name">姓名</string>
+	<string name="department">科室</string>
+	<string name="title">职称</string>
+	<string name="hospital">医院</string>
+	<string name="baseInfo">基本信息</string>
+	<string name="myacount">我的账号</string>
+	<string name="moreInfo">更多信息</string>
+	<string name="goodat">擅长</string>
+	<string name="achievement">成就、荣誉</string>
+	<string name="selfIntruduce">自我介绍</string>
+	<string name="serverMore">是否愿意为更多患者服务</string>
+	<string name="changePasswd">修改密码</string>
+	<string name="submit">完成</string>
+	<string name="login">登陆</string>
+	<string name="loginTitle">登陆妈妈问</string>
+	<string name="inputCellphone">请输入手机号</string>
+	<string name="inputPasswd">请输入密码</string>
+	<string name="userCenter">个人中心</string>
+	<string name="doctorId">医师号：</string>
+	<string name="tyyx"><u>体验一下</u></string>
+</resources>

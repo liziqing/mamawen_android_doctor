@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/back_right"
+            android:onClick="onClick"
+            android:layout_marginLeft="5dp"
+			android:layout_centerVertical="true"
+            />
+
+        <TextView 
+            android:id="@id/title"
+            style="@style/title_text"
+            android:text="@string/regist" />       
+    </RelativeLayout>
+	<FrameLayout android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:id="@+id/container"
+	    android:paddingLeft="40dp"
+	    android:paddingRight="40dp">
+	    <!-- <include layout="@layout/fragment_regist_cellphone"/> -->
+		<!-- <include layout="@layout/fragment_regist_step2"/> -->
+	</FrameLayout>
+</LinearLayout>

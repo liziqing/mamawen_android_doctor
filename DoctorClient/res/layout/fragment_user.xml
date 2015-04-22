@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:id="@id/title"
+            style="@style/title_text"
+            android:text="@string/userCenter" />
+    </RelativeLayout>
+	<TextView android:layout_width="match_parent"
+	    android:layout_height="2dp"
+	    android:background="@color/white_half"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+               
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <ImageButton
+                    android:id="@+id/headImageBtn"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/default2"
+                    android:background="@null"
+                    android:contentDescription="@null" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp" >
+
+                    <TextView
+                        android:id="@+id/rightArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/right" />
+
+                    <LinearLayout android:clickable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical" 
+                        android:id="@+id/llt_userInfo">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:orientation="horizontal" >
+
+                            <TextView android:id="@+id/txt_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:text="@string/name"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView android:id="@+id/txt_isauth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/radiobutton_background_checked"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="2dp"
+                                android:paddingBottom="2dp"
+                                android:text="未认证"
+                                android:textColor="@android:color/white"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/doctorId"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <TextView android:textColor="@color/white"
+                                android:id="@+id/doctorId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="12345678" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+			<TextView android:layout_width="match_parent"
+	    		android:layout_height="1dp"
+	    		android:background="@color/white_half"/>
+            <LinearLayout 
+                
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"   
+                    android:background="@color/white_half"               
+                    android:text="金额" />
+				
+                <Button android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textSize="16sp"                  
+                    android:gravity="right"
+                    android:text="0.00" 
+                    android:minHeight="30dp"
+                	android:background="@drawable/selector_btn"  
+                    android:textColor="@color/white"
+                    android:id="@+id/btn_money"/>
+				
+                <TextView android:padding="10dp"
+                     android:layout_marginLeft="1px"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:background="@color/white_half" 
+                    android:textColor="@color/white"                   
+                    android:text="积分" />
+				<!-- <TextView android:layout_width="1dp"
+				    android:layout_height="match_parent"
+				    android:background="@color/white"/> -->
+                <Button android:padding="10dp"
+                    android:layout_width="0dp"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textSize="16sp"                 
+                    android:gravity="right"
+                    android:text="0.00" 
+                    android:minHeight="30dp"
+                    android:background="@drawable/selector_btn"  
+                    android:id="@+id/btn_point"/>
+            </LinearLayout>
+            <TextView android:layout_width="match_parent"
+	    		android:layout_height="1dp"
+	    		android:background="@color/white_half"/>
+            <Button android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/uc_add"
+                android:drawableRight="@drawable/right"
+                android:text="申请认证"
+                android:id="@+id/btn_auth"
+                style="@style/function_button_style"/>
+            <TextView android:layout_width="match_parent"
+	    		android:layout_height="1dp"
+	    		style="@style/divider_line_uc"/>
+            <Button android:layout_marginTop="1px"
+                android:drawableLeft="@drawable/uc_paper"
+                android:drawableRight="@drawable/right"
+                android:text="自定义收费"
+                android:id="@+id/btn_fee"
+                style="@style/function_button_style"/>
+            <TextView android:layout_width="match_parent"
+	    		android:layout_height="20dp"
+	    		style="@style/divider_line_uc"/>
+            <Button 
+                android:drawableLeft="@drawable/uc_user"
+                android:drawableRight="@drawable/right"
+                android:text="全部订单"
+                android:id="@+id/btn_orders"
+                style="@style/function_button_style"/>
+            <TextView android:layout_width="match_parent"
+	    		android:layout_height="1dp"
+	    		style="@style/divider_line_uc"/>
+            <Button android:layout_marginTop="1px"
+                android:drawableLeft="@drawable/uc_user"
+                android:text="赚取金币"
+                android:id="@+id/btn_task"
+                android:drawableRight="@drawable/right"
+                style="@style/function_button_style"/>
+            <TextView android:layout_width="match_parent"
+	    		android:layout_height="1dp"
+	    		style="@style/divider_line_uc"/>
+            <Button android:layout_marginTop="1px"
+                android:visibility="gone"
+                android:drawableLeft="@drawable/uc_user"
+                android:drawableRight="@drawable/right"
+                android:text="吐槽CEO"
+                android:id="@+id/btn_complain"
+                style="@style/function_button_style"/>
+            <TextView android:layout_width="match_parent"
+	    		android:layout_height="20dp"
+	    		style="@style/divider_line_uc"/>
+            <Button
+                android:drawableLeft="@drawable/uc_setting"
+                android:text="设置与帮助"
+                android:id="@+id/btn_setting"
+                android:drawableRight="@drawable/right"
+                style="@style/function_button_style"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

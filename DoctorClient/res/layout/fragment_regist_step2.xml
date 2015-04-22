@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center" >
+    <EditText android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+        android:minHeight="45dp"
+        android:padding="5dp"
+	    android:inputType="text"
+	    android:hint="姓名"	    
+	    android:id="@+id/edt_name"
+	    android:background="@drawable/login_edittext_background"/>
+    
+    <mark.widget.Combox android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:minHeight="45dp"
+	    android:layout_marginTop="20dp"
+	    android:inputType="text"
+	    android:padding="5dp"
+	    android:hint="职称"
+	    android:id="@+id/cbox_job"
+	    android:entries="@array/jobs"
+	    android:background="@drawable/login_edittext_background"
+	    android:drawableRight="@drawable/down_white">
+        
+    </mark.widget.Combox>
+    
+    <mark.widget.Combox android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:minHeight="45dp"
+	    android:layout_marginTop="20dp"
+	    android:inputType="text"
+	    android:padding="5dp"
+	    android:hint="医院"
+	    android:entries="@array/hospitals"
+	    android:id="@+id/cbox_hospital"
+	    android:background="@drawable/login_edittext_background"
+	    android:drawableRight="@drawable/down_white">
+        
+    </mark.widget.Combox>
+        
+	<mark.widget.MySpinner android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:minHeight="45dp"
+	    android:layout_marginTop="20dp"
+	    android:text="科室"
+	    android:entries="@array/departments"
+	    android:padding="5dp"
+	    android:textSize="18sp"
+	    android:id="@+id/sp_department"
+	    android:gravity="center_vertical"
+	    android:background="@drawable/login_edittext_background"
+	    android:drawableRight="@drawable/down_white">
+	    
+	</mark.widget.MySpinner>
+	
+	<Button android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:minHeight="45dp"
+	    android:layout_marginTop="20dp"
+	    android:gravity="left|center_vertical"
+	    android:text="门诊时间"
+	    android:padding="5dp"
+	    android:id="@+id/btn_workTime"
+	    android:background="@drawable/login_edittext_background"
+	    android:drawableRight="@drawable/down_white"/>
+	
+	<Button android:id="@+id/btn_regist"
+	    android:layout_marginTop="20dp"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/selector_login_button"
+	    android:textColor="@color/white"
+	    android:text="注册"/>
+
+</LinearLayout>

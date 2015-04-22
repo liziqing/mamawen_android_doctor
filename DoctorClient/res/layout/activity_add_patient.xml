@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/back_right"
+            android:onClick="onClick"
+            android:layout_marginLeft="5dp"
+			android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@id/title"
+            style="@style/title_text"
+            android:text="添加患者" />
+        <Button android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:text="分享"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <TextView android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/white_half"/>
+	<RelativeLayout android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:padding="15dp">
+	    <CheckBox android:id="@+id/cbox_change"
+	        android:background="@drawable/selector_login_button"
+	        android:layout_width="match_parent"
+	        android:text="手机号添加患者"
+	        android:button="@null"
+	        android:padding="10dp"
+	        android:gravity="center"
+	        android:textColor="@color/white"
+	        android:layout_marginTop="15dp"
+	        android:layout_alignParentBottom="true"
+	        android:layout_height="wrap_content"
+	        android:minHeight="50dp"/>
+	    <FrameLayout android:id="@+id/content_container"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_above="@id/cbox_change">
+	        
+	    </FrameLayout>
+	</RelativeLayout>
+</LinearLayout>

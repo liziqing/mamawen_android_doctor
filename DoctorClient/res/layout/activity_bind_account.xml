@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_right"
+            android:onClick="onClick" />
+
+        <TextView
+            android:id="@id/title"
+            style="@style/title_text"
+            android:text="绑定账号" />
+
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center_vertical"
+         android:paddingLeft="20dp"
+         android:paddingRight="20dp"
+         android:paddingTop="15dp"
+         android:background="@color/white_half"
+         android:paddingBottom="15dp" >
+
+         <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="医生号"
+              android:layout_marginRight="20dp"
+              android:textColor="@color/white"
+              android:textSize="16sp" />
+
+         <TextView
+              android:id="@+id/txt_doctorId"
+              style="@style/text_value"
+              android:drawableRight="@null"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/transparent" />
+	<LinearLayout android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center_vertical"
+         android:paddingLeft="20dp"
+         android:paddingRight="20dp"
+         android:paddingTop="15dp"
+         android:background="@color/white_half"
+         android:paddingBottom="15dp" >
+
+         <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="手机号"
+              android:layout_marginRight="20dp"
+              android:textColor="@color/white"
+              android:textSize="16sp" />
+
+         <TextView
+              android:id="@+id/txt_phone"
+              style="@style/text_value"
+              />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/transparent" />
+    <LinearLayout android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center_vertical"
+         android:paddingLeft="20dp"
+         android:paddingRight="20dp"
+         android:paddingTop="15dp"
+         android:background="@color/white_half"
+         android:paddingBottom="15dp" >
+
+         <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="邮箱"
+              android:layout_marginRight="20dp"
+              android:textColor="@color/white"
+              android:textSize="16sp" />
+
+         <TextView
+              android:id="@+id/txt_email"
+              style="@style/text_value"
+              />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/transparent" />
+    <LinearLayout android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center_vertical"
+         android:paddingLeft="20dp"
+         android:paddingRight="20dp"
+         android:paddingTop="15dp"
+         android:background="@color/white_half"
+         android:paddingBottom="15dp" >
+
+         <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="微信"
+              android:layout_marginRight="20dp"
+              android:textColor="@color/white"
+              android:textSize="16sp" />
+
+         <TextView
+              android:id="@+id/txt_wx"
+              style="@style/text_value"
+              />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/transparent" />
+    <LinearLayout android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center_vertical"
+         android:paddingLeft="20dp"
+         android:paddingRight="20dp"
+         android:paddingTop="15dp"
+         android:background="@color/white_half"
+         android:paddingBottom="15dp" >
+
+         <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="QQ"
+              android:layout_marginRight="20dp"
+              android:textColor="@color/white"
+              android:textSize="16sp" />
+
+         <TextView
+              android:id="@+id/txt_qq"
+              style="@style/text_value"
+              />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/transparent" />
+    <LinearLayout android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center_vertical"
+         android:paddingLeft="20dp"
+         android:paddingRight="20dp"
+         android:paddingTop="15dp"
+         android:background="@drawable/selector_btn"
+         android:paddingBottom="15dp" >
+
+         <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="新浪微博"
+              android:layout_marginRight="20dp"
+              android:textColor="@color/white"
+              android:textSize="16sp" />
+
+         <TextView
+              android:id="@+id/txt_weibo"
+              style="@style/text_value"
+              />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/back_right"
+            android:onClick="onClick"
+            android:layout_marginLeft="5dp"
+			android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@id/title"
+            style="@style/title_text"
+            android:text="详细信息" />
+        
+        <Button android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:background="@color/transparent"
+            android:onClick="onClick"
+            android:layout_marginLeft="5dp"
+			android:layout_centerVertical="true"/>
+       
+    </RelativeLayout>
+    <TextView android:layout_width="match_parent"
+	    android:layout_height="2dp"
+	    android:background="@color/white_half"/>
+	<ScrollView android:layout_width="match_parent"
+	    
+	    android:layout_height="match_parent">
+	    <LinearLayout android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        <LinearLayout android:orientation="horizontal"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="10dp"
+	            android:clickable="true"
+	            android:background="@color/white_half"
+				android:id="@+id/reminder_detail_title"
+	            android:onClick="onClick"
+	            android:layout_marginBottom="10dp"
+	            android:gravity="center_vertical">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                style="@style/text_label"
+	                android:text="标题"/>
+	            <TextView android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:id="@+id/txt_detail_title"
+	                style="@style/text_label"
+					android:gravity="right|center_vertical"
+					android:drawableRight="@drawable/right"
+	                android:text="产检"/>
+	        </LinearLayout>
+	        
+	        <LinearLayout android:orientation="horizontal"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@color/white_half"
+	            android:padding="10dp"
+	            android:clickable="true"
+	            android:id="@+id/reminder_detail_time"
+	            android:onClick="onClick"
+	            android:layout_marginBottom="10dp"
+	            android:gravity="center_vertical">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                style="@style/text_label"
+	                android:text="时间"/>
+	            <TextView android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:id="@+id/txt_detail_time"
+	                style="@style/text_label"
+					android:gravity="right|center_vertical"
+					android:drawableRight="@drawable/right"
+	                android:text="2015-03-05 08:30"/>
+	        </LinearLayout>
+	        
+	        <LinearLayout android:orientation="horizontal"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="10dp"
+	            android:clickable="true"
+	            android:background="@color/white_half"
+	            android:id="@+id/reminder_detail_patient"
+	            android:onClick="onClick"
+	            android:layout_marginBottom="10dp"
+	            android:gravity="center_vertical">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                style="@style/text_label"
+	                android:text="患者"/>
+	            <TextView android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:id="@+id/txt_detail_patient"
+	                style="@style/text_label"
+					android:gravity="right|center_vertical"
+					android:drawableRight="@drawable/right"
+	                android:text="Jack"/>
+	        </LinearLayout>
+
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical" >
+				<RelativeLayout android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:padding="10dp"
+				    android:background="@color/white_half"
+				    android:gravity="center_vertical">
+				    <TextView android:layout_width="wrap_content"
+	                	android:layout_height="wrap_content"
+	                	style="@style/text_label"
+	                	android:layout_centerVertical="true"
+	                	android:text="同时提醒我"/>
+				    
+				    <CheckBox
+                    	android:id="@+id/cb_remind_self"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:layout_alignParentRight="true"
+                    	android:textColor="@color/white"
+                    	android:button="@null"
+                    	android:background="@drawable/selector_checkbtn"
+                    	android:textSize="18sp" />
+				</RelativeLayout>
+				<TextView android:layout_width="match_parent"
+				    android:layout_height="1dp"
+				    android:background="@color/white"
+				    android:visibility="gone"/>
+				<RelativeLayout android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:padding="10dp"
+				    android:visibility="gone"
+				    android:background="@color/white_half"
+				    android:gravity="center_vertical">
+				    <TextView android:layout_width="wrap_content"
+	                	android:layout_height="wrap_content"
+	                	style="@style/text_label"
+	                	android:layout_centerVertical="true"
+	                	android:text="提醒患者"/>
+				    
+				    <CheckBox
+                    	android:id="@+id/cb_remind_other"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:layout_alignParentRight="true"
+                    	android:checked="true"
+                    	android:textColor="@color/white"
+                    	android:button="@null"
+                    	android:background="@drawable/selector_checkbtn"
+                    	android:textSize="18sp" />
+				</RelativeLayout>
+				<TextView android:layout_width="match_parent"
+				    android:layout_height="1dp"
+				    android:background="@color/transparent"/>
+	            <LinearLayout
+	                android:id="@+id/reminder_detail_times"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:background="@color/white_half"
+	                android:clickable="true"
+	                android:onClick="onClick"
+	                android:gravity="center_vertical"
+	                android:orientation="horizontal"
+	                android:padding="10dp" >
+
+	                <TextView
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:text="重复天数"
+	                    style="@style/text_label" />
+
+	                <TextView
+	                    android:id="@+id/txt_detail_times"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    style="@style/text_label"
+	                    android:drawableRight="@drawable/right"
+	                    android:gravity="right|center_vertical"
+	                    android:text="0" />
+	            </LinearLayout>
+	        </LinearLayout>
+	        
+	        <TextView android:layout_marginTop="10dp"
+	            android:layout_width="match_parent"
+	            style="@style/text_label"
+	            android:layout_height="wrap_content"
+	            android:padding="10dp"
+	            android:background="#55FFFFFF"
+	            android:text="提醒内容"/>
+			<EditText android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:inputType="textMultiLine"
+			    android:id="@+id/edt_content"
+			    style="@android:style/Widget.EditText"
+			    />
+	        
+	    </LinearLayout>
+	    
+	    
+	</ScrollView>
+</LinearLayout>

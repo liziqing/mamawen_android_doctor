@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/login_background"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/back_right"
+            android:onClick="onClick"
+            android:layout_marginLeft="5dp"
+			android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@id/title"
+            style="@style/title_text"
+            android:text="确认" />
+    </RelativeLayout>
+	<TextView android:layout_width="match_parent"
+	    android:layout_height="2dp"
+	    android:background="@color/white_half"/>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button android:onClick="onClick"
+            android:id="@+id/btn_submit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+             />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btn_submit" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <include layout="@layout/admission_summary_item" />
+				<TextView android:layout_width="match_parent"
+					android:textColor="@color/white"
+					android:drawablePadding="10dp"
+				    android:paddingLeft="15dp"
+				    android:layout_height="wrap_content"
+				    android:gravity="center_vertical"
+				    android:drawableLeft="@drawable/picture"
+				    android:text="附件图片"/>
+                <mark.widget.MyGridView
+                    android:layout_marginLeft="15dp"
+				    android:layout_marginRight="15dp"
+                    android:id="@+id/gridView_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="60dp"
+                    android:numColumns="4"
+                    android:padding="5dp"
+                    android:verticalSpacing="2dp" >
+                </mark.widget.MyGridView>
+				<TextView android:layout_width="match_parent"
+					android:textColor="@color/white"
+					android:drawablePadding="10dp"
+				    android:paddingLeft="15dp"
+				    android:layout_marginTop="15dp"
+				    android:layout_height="wrap_content"
+				    android:gravity="center_vertical"
+				    android:drawableLeft="@drawable/drug"
+				    android:text="正在用药"/>
+				<mark.widget.FlowLayout
+				    
+				    android:layout_marginLeft="15dp"
+				    android:layout_marginRight="15dp"
+                    android:id="@+id/flowLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </mark.widget.FlowLayout>
+                
+				<LinearLayout android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:orientation="horizontal"
+				    android:padding="20dp"
+				    android:gravity="center_horizontal">
+				    <TextView android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:textColor="@color/white"
+				        android:textSize="36sp"
+				        android:id="@+id/txt_point"
+				        android:text="+20"/>
+				    <TextView android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:textColor="@color/white"
+				        android:textSize="18sp"
+				        android:text="积分"/>
+				</LinearLayout>
+                <!-- <Button
+                    style="@style/function_button_style"
+                    android:layout_marginTop="10px"
+                    android:drawableLeft="@drawable/default_head"
+                    android:drawableRight="@drawable/right_gray"
+                    android:text="免费期限" />
+
+                <Button
+                    style="@style/function_button_style"
+                    android:layout_marginTop="10px"
+                    android:drawableLeft="@drawable/default_head"
+                    android:drawableRight="@drawable/right_gray"
+                    android:text="标签" />
+
+                <Button
+                    style="@style/function_button_style"
+                    android:layout_marginTop="1px"
+                    android:drawableLeft="@drawable/default_head"
+                    android:drawableRight="@drawable/right_gray"
+                    android:text="备注" />
+
+                <Button
+                    style="@style/function_button_style"
+                    android:layout_marginTop="10px"
+                    android:drawableLeft="@drawable/default_head"
+                    android:drawableRight="@drawable/right_gray"
+                    android:text="回访" /> -->
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

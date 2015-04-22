@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_right"
+            android:onClick="onClick" />
+
+        <TextView
+            android:id="@id/title"
+            style="@style/title_text"
+            android:text="@string/baseInfo" />
+
+        
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/submit"
+            android:onClick="onClick"
+            android:textColor="@color/white"
+            android:id="@+id/btn_commit"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/white_half"
+        android:text="基本信息每个月只能修改一次"/>
+	<EditText android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+        android:minHeight="45dp"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+	    android:inputType="text"
+	    android:hint="@string/name"	    
+	    android:textColor="@color/white"
+	    android:id="@+id/edt_name"
+	    android:background="@drawable/login_edittext_background"/>
+    
+    <mark.widget.Combox android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:minHeight="45dp"
+	    android:layout_margin="10dp"
+	    android:inputType="text"
+	    android:padding="5dp"
+	    android:hint="@string/title"
+	    android:textColor="@color/white"
+	    android:id="@+id/cbox_job"
+	    android:entries="@array/jobs"
+	    android:background="@drawable/login_edittext_background"
+	    android:drawableRight="@drawable/down_white">
+        
+    </mark.widget.Combox>
+    
+    <mark.widget.Combox android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:minHeight="45dp"
+	    android:inputType="text"
+	    android:padding="5dp"
+	    android:hint="@string/hospital"
+	    android:textColor="@color/white"
+	  	android:layout_margin="10dp"
+	    android:entries="@array/hospitals"
+	    android:id="@+id/cbox_hospital"
+	    android:background="@drawable/login_edittext_background"
+	    android:drawableRight="@drawable/down_white">
+        
+    </mark.widget.Combox>
+        
+	<mark.widget.MySpinner android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:minHeight="45dp"
+	    android:layout_margin="10dp"
+	    android:text="@string/department"
+	    android:entries="@array/departments"
+	    android:padding="5dp"
+	    android:textColor="@color/white"
+	    android:textSize="18sp"
+	    android:id="@+id/sp_department"
+	    android:gravity="center_vertical"
+	    android:background="@drawable/login_edittext_background"
+	    android:drawableRight="@drawable/down_white">
+	    
+	</mark.widget.MySpinner>
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<RelativeLayout android:layout_height="@dimen/title_height"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView android:id="@+id/title"                    
+            style="@style/title_text"          
+            android:text="随访"/>
+        <!-- <CheckBox android:id="@+id/btn_quiet"
+            android:layout_marginRight="5dp"
+            android:layout_width="24dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@null"
+            android:background="@drawable/selector_remind"/> -->
+        <Button android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/btn_search"   
+            android:visibility="gone"       
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/search"/>            
+    </RelativeLayout>
+    
+    <RadioGroup
+        android:id="@+id/RadioGroup_patient"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/msg"
+            style="@style/RadioButton_type_select"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="消息" />
+
+        <RadioButton
+            android:id="@+id/contacts"
+            android:layout_height="match_parent"
+            style="@style/RadioButton_type_select"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="联系人" />
+    </RadioGroup>
+    <!--
+             <ImageButton android:src="@android:drawable/ic_input_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:contentDescription="@null"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/contact_add"/>
+    -->
+
+    <FrameLayout
+        android:id="@+id/patient_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+</LinearLayout>

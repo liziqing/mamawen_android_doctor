@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- URL -->
+    <string name="host">http://115.159.49.31:9000</string>
+    <string name="urlPostReport">/doctor/inquiry/report</string>
+    <string name="urlLogin">/doctor/login</string>
+    <string name="urlBindClientID">/doctor/clientID/bind</string>
+    <!-- <string name="urlLogin">/doctor/login</string>
+    <string name="urlLogin">/doctor/login</string>
+    <string name="urlLogin">/doctor/login</string>
+    <string name="urlLogin">/doctor/login</string>
+    <string name="urlLogin">/doctor/login</string>
+    <string name="urlLogin">/doctor/login</string>
+    <string name="urlLogin">/doctor/login</string> -->
+    
+</resources>

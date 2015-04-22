@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_background"
+        android:textColor="@color/white"
+        android:text="添加患者"
+        android:id="@+id/btn_add_patient"
+        android:drawableTop="@drawable/adduser"
+        android:scaleType="fitCenter"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

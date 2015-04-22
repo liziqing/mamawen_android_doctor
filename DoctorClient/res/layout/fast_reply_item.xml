@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="vertical" >
+
+    <TextView android:id="@+id/subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:singleLine="true"
+        android:text="1.主题"
+        android:textSize="20sp" />
+	<TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="快捷回复1"
+        android:id="@+id/detail"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="25dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/msg_voice"
+        />
+</LinearLayout>

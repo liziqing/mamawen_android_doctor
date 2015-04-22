@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/login_background">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/back_right"
+            android:onClick="onClick"
+            android:layout_marginLeft="5dp"
+			android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@id/title"
+            style="@style/title_text"
+            android:text="重置密码" />
+        <!-- <Button android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/gray_text"
+            android:background="@color/transparent"
+            android:text="新增"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/> -->
+    </RelativeLayout>
+	<TextView android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/white_half"/>
+	<LinearLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal">
+	    <TextView android:layout_width="95dp"
+	        android:layout_height="wrap_content"
+	        android:text="新密码"
+	        android:textSize="18sp"
+	        android:padding="10dp"
+	        android:textColor="@color/white"/>
+	    <EditText android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        android:layout_marginRight="10dp"
+	        style="@android:style/Widget.EditText"
+	        android:inputType="textPhonetic"/>
+	</LinearLayout>
+	<LinearLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_vertical"
+	    android:paddingRight="10dp"
+	    android:orientation="horizontal">
+	    <TextView android:layout_width="95dp"
+	        android:layout_height="wrap_content"
+	        android:text="重复密码"
+	        android:padding="10dp"
+	        android:textSize="18sp"
+	        android:textColor="@color/white"/>
+	    <EditText android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:singleLine="true"
+	        style="@android:style/Widget.EditText"
+	        android:inputType="textPhonetic"/>
+	</LinearLayout>
+	
+	<Button android:layout_margin="10dp"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:textColor="@color/white"
+	    android:onClick="onClick"
+	    android:id="@+id/btn_submit"
+	    android:text="提交"/>
+</LinearLayout>

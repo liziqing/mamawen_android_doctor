@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_right"
+            android:onClick="onClick" />
+
+        <TextView 
+            android:id="@id/title"
+            style="@style/title_text"
+            android:text="@string/changePasswd" />
+
+        <Button
+            android:id="@+id/btn_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:onClick="onClick"
+            android:text="@string/submit"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+	<TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white_half" />
+	<EditText android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:inputType="textPassword"
+	    android:hint="旧密码"
+	    android:padding="10dp"
+	    style="@android:style/Widget.EditText"
+	    android:layout_margin="10dp"
+	    android:id="@+id/edt_old_psd"/>
+	<EditText android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:inputType="textPassword"
+	    android:hint="新密码"
+	    android:padding="10dp"
+	    style="@android:style/Widget.EditText"
+	    android:layout_margin="10dp"
+	    android:id="@+id/edt_new_psd"/>
+
+	<EditText
+	    android:id="@+id/edt_confirm_psd"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="10dp"
+	    style="@android:style/Widget.EditText"
+	    android:ems="10"
+	    android:hint="确认密码"
+	    android:inputType="textPassword"
+	    android:padding="10dp" >
+
+	    <requestFocus />
+	</EditText>
+
+</LinearLayout>

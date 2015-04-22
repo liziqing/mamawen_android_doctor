@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/login_background"
+    tools:context="${relativePackage}.${activityClass}" >
+	<RadioGroup android:layout_width="match_parent"
+	    android:paddingTop="3dp"
+	    android:background="@color/white_half"
+	    android:paddingBottom="2dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:id="@+id/main_radio_group"
+	    android:orientation="horizontal">
+	    <RadioButton android:id="@+id/radio1"	        
+	        style="@style/tab_of_radio_button"
+	        android:drawableTop="@drawable/selector_rd_jiezhen"
+	        android:checked="true"  
+	        android:gravity="center_horizontal"    
+	        android:text="接诊"/>
+	    
+	   <!--  <RelativeLayout android:layout_weight="1"
+	        android:layout_height="wrap_content">
+	    	<RadioButton android:id="@+id/radio1"	        
+	        	style="@style/tab_of_radio_button"
+	        	android:layout_height="wrap_content"
+	        	android:layout_width="wrap_content"
+	        	android:drawableTop="@drawable/selector_rd_jiezhen"
+	        	android:checked="true"  
+	        	android:layout_centerInParent="true"
+	        	android:gravity="center_horizontal"    
+	        	android:text="接诊"/>
+	    	<TextView android:layout_width="15dp"
+	    	    android:layout_height="15dp"
+	    	    android:background="@drawable/circle"
+	    	    android:text="1"
+	    	    android:gravity="center"
+	    	    android:layout_alignTop="@id/radio1"
+	    	    android:layout_toRightOf="@id/radio1"
+	    	    android:textColor="#FF0000"/>
+	    </RelativeLayout> -->
+	    <RadioButton android:id="@+id/radio2"	        
+	        style="@style/tab_of_radio_button"
+	        android:drawableTop="@drawable/selector_rd_huanzhe"
+	        android:text="患者"/>
+	    <RadioButton android:id="@+id/radio5"	        
+	        style="@style/tab_of_radio_button"
+	        android:drawableTop="@drawable/selector_rd_jilu"
+	        android:text="记录"/>
+	    <RadioButton android:id="@+id/radio3"
+	        android:drawableTop="@drawable/selector_rd_duihuan"
+	        style="@style/tab_of_radio_button"
+	        android:text="兑换"/>
+	    <RadioButton android:id="@+id/radio4"
+	        style="@style/tab_of_radio_button"
+	        android:drawableTop="@drawable/selector_rd_wo"
+	        android:text="我"/>
+	</RadioGroup>
+	<TextView android:layout_width="match_parent"
+	    android:layout_height="1px"
+	    android:background="#AAAAAA"
+	    android:id="@+id/diliver"
+	    android:layout_above="@id/main_radio_group"/>
+	<FrameLayout android:layout_above="@id/diliver"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:id="@+id/main_container">
+	    
+	</FrameLayout>
+</RelativeLayout>

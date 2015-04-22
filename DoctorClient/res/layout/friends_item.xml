@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"   
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_half"
+        android:paddingLeft="30dp"
+    	android:paddingRight="30dp"
+    	android:paddingTop="5dp"
+    	android:paddingBottom="5dp"
+    	android:text="A"
+    	android:id="@+id/txt_group_flag"/>
+	<LinearLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"
+	    android:paddingLeft="25dp"
+    	android:paddingRight="25dp"
+	    android:orientation="horizontal">
+	    <ImageView android:layout_width="60dp"
+	        android:layout_height="60dp"
+	        android:background="@android:color/transparent"
+	        android:contentDescription="@null"
+	        android:id="@+id/headImage"
+	        android:src="@drawable/default2"/>
+	    <TextView android:id="@+id/txt_name"
+	        android:layout_marginLeft="5dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:textSize="16sp"
+	        android:textColor="@color/white"
+	        android:singleLine="true"
+	        android:text="不期而遇"/>
+	</LinearLayout>
+</LinearLayout>

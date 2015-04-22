@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical" >
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <ImageView android:id="@+id/headImage"
+            android:contentDescription="@null"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/default2"/>
+        <LinearLayout android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="bottom"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+            <!-- <TextView 
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textColor="#FF0000"
+            	android:textSize="18sp"
+            	android:gravity="center"
+            	android:text="+"/> -->
+        	<TextView android:id="@+id/point"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textColor="@color/white"
+            	android:textSize="30sp"
+            	android:gravity="center"
+            	android:text="+30"/>
+        	<TextView  android:id="@+id/jifen"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:textColor="@color/white"
+            	android:textSize="18sp"
+            	android:gravity="center"
+            	android:text="积分"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"  
+            android:layout_centerVertical="true"          
+            android:layout_toLeftOf="@id/right"
+            android:layout_toRightOf="@id/headImage"
+            android:weightSum="2">
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:ellipsize="end"
+                android:text="安安静静"
+                android:id="@+id/name"/>
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:text="宝宝两个月"
+                android:id="@+id/describe"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </RelativeLayout>
+    
+	<TextView android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:textSize="14sp"
+	    android:textColor="@color/white"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    android:layout_marginTop="5dp"
+	    android:layout_marginBottom="5dp"
+	    android:text="a.用户通过客户端上传急诊问题⾄至服务器。\nb.服务器通过⼤大数据技术为医⽣生匹配信息。"
+	    android:id="@+id/inquiry_content"/>
+	<!-- <RelativeLayout android:layout_width="match_parent"	    
+	    android:layout_height="wrap_content">
+	    <TextView android:id="@+id/time"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="12sp"
+	        android:text="剩余  03:12"
+	        android:textColor="@color/gray_background"/>
+	    <com.android.pc.ioc.view.TimeTextView
+	        android:id="@+id/time"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="12sp"
+	        android:textColor="@color/gray_background">
+	        
+	    </com.android.pc.ioc.view.TimeTextView>
+	    <TextView android:id="@+id/imgInfo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="12sp"
+	        android:text="附图  0"
+	        android:layout_alignParentRight="true"
+	        android:textColor="@color/gray_background"/>
+	</RelativeLayout> -->
+	<TextView android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/gray_background"/>
+</LinearLayout>

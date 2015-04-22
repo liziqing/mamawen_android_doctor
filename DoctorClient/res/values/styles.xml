@@ -1,0 +1,110 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+	
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+       	<item name="android:windowTitleBackgroundStyle">@style/TitleBarBackground</item>
+    </style>
+    <style name="TitleBarBackground" >  
+        <item name="android:background">#ff8f26</item>
+    </style>
+    <!-- 主页导航菜单样式 -->
+	<style name="tab_of_radio_button">
+	    <item name="android:button">@null</item>
+	    <item name="android:drawablePadding">2dp</item> 
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:gravity">center_horizontal</item>
+	    <item name="android:layout_weight">1</item>
+	    <item name="android:padding">5dp</item>
+	    <item name="android:textSize">12sp</item>
+	    <item name="android:textColor">@color/selector_tab_textcolor</item>
+	</style>
+	<!-- 顶部标题样式 -->
+	<style name="title_text">
+	    <item name="android:textColor">@color/white</item>
+	    <item name="android:textSize">@dimen/title_textSize</item>
+	    <item name="android:layout_centerInParent">true</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_width">wrap_content</item>
+	    <!-- <item name="android:textStyle">bold</item> -->
+	</style>
+	<!-- 资讯分类   列表内容导航选项样式 -->
+	<style name="RadioButton_type_select">
+	    <item name="android:gravity">center</item>
+	    <item name="android:textColor">@color/white</item>
+	    <!-- <item name="android:textColor">@color/selector_radiobutton_textcolor</item> -->
+	    <!-- <item name="android:textSize">@dimen/title_textSize</item> -->
+	    <item name="android:layout_height">match_parent</item>
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:button">@null</item>
+	    <item name="android:paddingTop">8dp</item>
+	    <item name="android:paddingBottom">8dp</item>	    
+	    <item name="android:background">@drawable/selector_title_tab</item>
+	</style>
+	<!-- 特色功能栏样式 -->
+	<style name="function_menu">
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:textColor">@color/gray_text</item>
+	    <item name="android:background">@android:color/transparent</item>
+	</style>
+	<!-- 个人中心功能菜单样式 -->
+	<style name="function_button_style">
+	    <item name="android:background">@drawable/selector_btn</item>
+	    <item name="android:paddingLeft">15dp</item>
+	    <item name="android:paddingRight">15dp</item>
+	    <item name="android:paddingTop">5dp</item>
+	    <item name="android:paddingBottom">5dp</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_width">match_parent</item>
+	    <item name="android:textColor">@color/white</item>
+	    <item name="android:textSize">16sp</item>
+	    <item name="android:gravity">center_vertical|left</item>
+	    <item name="android:drawablePadding">5dp</item>
+	</style>
+	<!-- lable -->
+	<style name="text_label">
+	    <item name="android:drawablePadding">10dp</item>
+	    <item name="android:textSize">18sp</item>
+	    <item name="android:textColor">@color/white</item>
+	</style>
+	
+	<!-- lable value -->
+	<style name="text_value">
+	    <item name="android:drawablePadding">5dp</item>
+	    <item name="android:drawableRight">@drawable/right</item>
+	    <item name="android:textSize">16sp</item>
+	    <item name="android:text">@string/unset</item>
+	    <!-- <item name="android:textColor">@color/white</item> -->
+	    <item name="android:layout_width">match_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:gravity">right</item>
+	    <item name="android:singleLine">true</item>
+	    <item name="android:ellipsize">end</item>
+	</style>
+	
+	<style name="divider_line_uc">
+	    <item name="android:background">@color/transparent</item>
+	</style>
+	
+	 <style name="dialog" parent="@android:style/Theme.Dialog">  
+        <item name="android:windowFrame">@null</item><!-- 边框 -->  
+        <item name="android:windowIsFloating">true</item><!-- 是否浮现在activity之上 -->  
+        <item name="android:windowIsTranslucent">false</item><!-- 半透明 -->  
+        <item name="android:windowNoTitle">true</item><!-- 无标题 -->  
+        <item name="android:windowBackground">@drawable/login_btn_background_unpressed</item><!-- 自己想要的背景 -->  
+        <item name="android:backgroundDimEnabled">false</item><!-- 模糊 -->  
+    </style>
+</resources>

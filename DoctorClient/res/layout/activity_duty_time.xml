@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/back_right"
+            android:onClick="onClick"
+            android:layout_marginLeft="5dp"
+			android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@id/title"
+            style="@style/title_text"
+            android:text="接诊时间" />
+        
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="完成"
+            android:onClick="onClick"
+            android:textColor="@color/white"
+            android:id="@+id/btn_commit"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <TextView android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/white_half"/>
+	<LinearLayout android:layout_width="match_parent"
+	    android:baselineAligned="false"
+	    
+	    android:layout_height="match_parent"
+	    android:orientation="horizontal"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="10dp"
+	    android:layout_marginBottom="20dp"
+	    android:weightSum="4">
+	    <LinearLayout android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical">
+	        <TextView android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="0.5"
+	            />
+	        <TextView android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:textColor="@color/white"
+	            android:text="周一"/>
+	        <TextView android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:textColor="@color/white"
+	            android:text="周二"/>
+	        <TextView android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:textColor="@color/white"
+	            android:text="周三"/>
+	        <TextView android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:textColor="@color/white"
+	            android:text="周四"/>
+	        <TextView android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:textColor="@color/white"
+	            android:text="周五"/>
+	        <TextView android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:textColor="@color/white"
+	            android:text="周六"/>
+	        <TextView android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:textColor="@color/white"
+	            android:text="周日"/>
+	    </LinearLayout>
+	    <LinearLayout android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	   
+	        android:gravity="center_horizontal"
+	        android:orientation="vertical">
+	        
+	        <TextView android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="0.5"
+	            android:gravity="center"
+	            android:textColor="@color/white"
+	            android:text="上午"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/mon_am"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/tu_am"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/wed_am"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/thu_am"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/fri_am"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/sat_am"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/sun_am"/>
+	    </LinearLayout>
+	    <LinearLayout android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+	        
+	        android:gravity="center_horizontal"
+	        android:orientation="vertical">
+	        
+	        <TextView android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="0.5"
+	            android:gravity="center"
+	            android:textColor="@color/white"
+	            android:text="下午"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/mon_pm"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/tu_pm"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/wed_pm"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/thu_pm"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/fri_pm"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/sat_pm"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/sun_pm"/>
+	    </LinearLayout>
+	    <LinearLayout android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="match_parent"
+
+	        android:gravity="center_horizontal"
+	        android:orientation="vertical">
+	        
+	        <TextView android:layout_width="match_parent"
+	            android:layout_height="0dp"
+	            android:layout_weight="0.5"
+	            android:gravity="center"
+	            android:textColor="@color/white"
+	            android:text="晚上"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/mon_nt"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/tu_nt"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/wed_nt"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/thu_nt"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/fri_nt"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/sat_nt"/>
+	        <CheckBox android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:padding="0dp"
+	            android:id="@+id/sun_nt"/>
+	    </LinearLayout>
+	</LinearLayout>
+	
+</LinearLayout>

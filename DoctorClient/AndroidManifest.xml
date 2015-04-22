@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.net_show.doctor"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"/>
+    <!-- 网路权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡写入权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 读取联系人 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 照相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 网路状态读取、改变监听权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 控制手机震动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <!-- 系统级Dialog权限 -->
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />  
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" /> 
+	
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="getui.permission.GetuiService." />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="getui.permission.GetuiService.cn.net_show.doctor" />
+  
+    <!--  -->
+    <permission
+        android:name="getui.permission.GetuiService.cn.net_show.doctor"
+        android:protectionLevel="normal" >
+    </permission>
+
+    <application 
+        android:name="cn.net_show.doctor.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme">
+        
+        <activity
+            android:name="cn.net_show.doctor.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" 
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.net_show.doctor.activity.BodyActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="cn.net_show.doctor.activity.BodyActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		
+        <!-- SDK -->
+        <!--  -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="gezPgAzgQ4A2LuzdyApzZ8" /> <!-- APPID -->
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="OJ7QnLmGrh8vC2aC7aCO39" /> <!-- APPKEY -->
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="aKp82883ka5qiUs09mW3M7" /> <!-- APPSECRET -->
+        <meta-data
+            android:name="PUSH_GROUPID"
+            android:value="" />
+        <!-- SDK -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice" >
+        </service>
+		
+        <!-- 配置第三方Receiver -->
+        <receiver
+            android:name="cn.net_show.doctor.broadcast.PushReciver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.gezPgAzgQ4A2LuzdyApzZ8" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="com.igexin.sdk.PushReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.igexin.sdk.PushManagerReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- activity -->
+        <activity
+            android:name="com.igexin.getuiext.activity.GetuiExtActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="android.task.myServicetask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.igexin.getuiext.service.PayloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+
+                <!-- com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4 -->
+                <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
+                <!-- android:name="com.igexin.sdk.action.appId" -->
+                <action android:name="com.igexin.sdk.action.gezPgAzgQ4A2LuzdyApzZ8" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.igexin.getuiext.service.GetuiExtService"
+            android:process=":pushservice" />
+        <!-- download -->
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+
+        <receiver android:name="com.igexin.download.DownloadReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.cn.net_show.doctor"
+            android:process=":pushservice" /> <!-- downloads. -->
+        <!-- =========================================================================== -->
+
+        
+        <activity android:name="cn.net_show.doctor.activity.CaseDetailActivity" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="cn.net_show.doctor.activity.CaseDetailActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:screenOrientation="portrait"
+            android:name="cn.net_show.doctor.activity.IMActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+            <intent-filter>
+                <action android:name="cn.net_show.doctor.activity.IMActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.AddPatientActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.CloudActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.ReminderActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:screenOrientation="portrait"
+            android:name="cn.net_show.doctor.activity.ReminderDetailActivity"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.WorkTimeActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.AuthActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.ReportActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.EditUserInfoActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.EditBasicInfoActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.EditMoreInfoActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.ChangePasswdActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.FeeSetActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.SettingActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.OrderListActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.MyMoneyActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.SimpleListActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.NotifySettingActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.BindAccountActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.AboutActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.ForgetPasswdActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="cn.net_show.doctor.activity.ResetPasswdActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- android:theme="@style/Theme.AppCompat" -->
+        <activity android:screenOrientation="portrait"
+            android:name="cn.net_show.doctor.activity.AdviceActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:screenOrientation="portrait"
+            android:name="cn.net_show.doctor.activity.ReplyEditActivity"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity android:screenOrientation="portrait"
+            android:name="cn.net_show.doctor.activity.RegistActivity"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <service
+            android:name="cn.net_show.doctor.service.IMservice"
+            android:exported="false"
+            android:process="cn.net_show.doctor2">
+            <intent-filter>
+                <action android:name="cn.net_show.doctor.service.IMservice" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="cn.net_show.doctor.service.PlayVoiceService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.net_show.doctor.service.PlayVoiceService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="cn.net_show.doctor.service.NotifyService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.net_show.doctor.service.NotifyService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
