@@ -75,6 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal" >
 
                     <RadioButton
@@ -130,6 +131,8 @@
 				    android:layout_height="wrap_content"
 				    android:layout_marginTop="10dp"
 				    android:padding="10dp"
+				    android:visibility="gone"
+				    android:layout_marginBottom="10dp"
 				    android:orientation="horizontal"
 				    android:background="@color/white_half">
 
@@ -159,10 +162,7 @@
 				        android:textSize="14sp" />
 
 				</LinearLayout>
-				<mark.widget.MyChart 
-	                android:layout_width="match_parent"
-	                android:layout_height="wrap_content"
-	                android:minHeight="160dp"/>
+				<include layout="@layout/chartview"/>
 				<!-- <LinearLayout android:layout_width="match_parent"
 				    android:layout_height="wrap_content"
 				    android:layout_marginTop="10dp"
