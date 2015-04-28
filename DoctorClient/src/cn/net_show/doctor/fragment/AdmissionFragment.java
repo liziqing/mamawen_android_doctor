@@ -9,9 +9,7 @@ package cn.net_show.doctor.fragment;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-
 import org.litepal.crud.DataSupport;
-
 import mark.utils.DateFormat;
 import mark.utils.HttpUtils;
 //import mark.utils.Logger;
@@ -23,7 +21,6 @@ import cn.net_show.doctor.R;
 import cn.net_show.doctor.activity.AddPatientActivity;
 import cn.net_show.doctor.activity.AuthActivity;
 import cn.net_show.doctor.activity.CaseDetailActivity;
-import cn.net_show.doctor.activity.FeeSetActivity;
 import cn.net_show.doctor.activity.NotifySettingActivity;
 import cn.net_show.doctor.activity.ReminderActivity;
 import cn.net_show.doctor.adapter.AdmissionAdapter;
@@ -98,7 +95,7 @@ public class AdmissionFragment extends Fragment implements RefreshListener,
 		}
 		// page++;
 		String url = "/inquiry/list?uid=" + MyApplication.Doctor.getDoctorID()
-				+ "&limit=20&page=0&sessionkey=" + MyApplication.Doctor.getSessionKey();// +page;
+				+ "&limit=10&page=0&sessionkey=" + MyApplication.Doctor.getSessionKey();// +page;
 		HttpUtils.doGetAsyn(MyApplication.ServerUrl + url, callBack);
 
 	}

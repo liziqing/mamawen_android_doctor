@@ -17,6 +17,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import cn.net_show.doctor.model.Doctor;
+import cn.net_show.doctor.model.FriendsRecord;
 import cn.net_show.doctor.model.InquiryItem;
 import cn.net_show.doctor.model.ReminderItem;
 
@@ -142,6 +143,45 @@ public class JsonUtils {
 			}
 			return gson.fromJson(obj.getString("reminders"),
 						new TypeToken<ArrayList<ReminderItem>>() {
+						}.getType());
+		}catch (JSONException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	
+	public ArrayList<FriendsRecord> getFriendRecords(String json){
+		if (json == null || json.trim().equals("")) {
+			return null;
+		}
+		try {
+			JSONObject obj = new JSONObject(json);
+			int code = obj.getInt("code");
+			if (code != 0) {
+				return null;
+			}
+			return gson.fromJson(obj.getString("records"),
+						new TypeToken<ArrayList<FriendsRecord>>() {
+						}.getType());
+		}catch (JSONException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public ArrayList<FriendsRecord.Record> getRecordData(String json){
+		if (json == null || json.trim().equals("")) {
+			return null;
+		}
+		try {
+			JSONObject obj = new JSONObject(json);
+			int code = obj.getInt("code");
+			if (code != 0) {
+				return null;
+			}
+			return gson.fromJson(obj.getString("records"),
+						new TypeToken<ArrayList<FriendsRecord.Record>>() {
 						}.getType());
 		}catch (JSONException e) {
 			e.printStackTrace();

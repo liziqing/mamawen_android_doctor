@@ -26,7 +26,7 @@
             style="@style/title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="晨晨妈妈" />
+            android:text="" />
        
     </RelativeLayout>
 
@@ -45,7 +45,7 @@
             android:background="@drawable/selector_login_button"
             android:text="联系患者" />
 
-        <ScrollView
+        <mark.widget.MyScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/btn_contact_patient" >
@@ -69,7 +69,7 @@
                     android:onClick="onClick"
                     android:textColor="@color/white" />
 
-                <RadioGroup
+                <RadioGroup android:visibility="gone"
                     android:id="@+id/radio_group"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
                     android:layout_marginBottom="10dp"
                     android:orientation="horizontal" >
 
-                    <RadioButton
+                    <!-- <RadioButton
                         android:id="@+id/rd_day"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
                         android:textColor="@color/white"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:text="日" />
+                        android:text="日" /> -->
 
                     <RadioButton android:layout_marginRight="1dp"
                         android:id="@+id/rd_week"
@@ -162,7 +162,35 @@
 				        android:textSize="14sp" />
 
 				</LinearLayout>
-				<include layout="@layout/chartview"/>
+				<cn.net_show.doctor.widget.CustomerChart 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="10dp"
+				    android:id="@+id/chart1">
+				    
+				</cn.net_show.doctor.widget.CustomerChart>
+				<cn.net_show.doctor.widget.CustomerChart 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="10dp"
+				    android:id="@+id/chart2">
+				    
+				</cn.net_show.doctor.widget.CustomerChart>
+				<cn.net_show.doctor.widget.CustomerChart 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="10dp"
+				    android:id="@+id/chart3">
+				    
+				</cn.net_show.doctor.widget.CustomerChart>
+				<cn.net_show.doctor.widget.CustomerChart 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_marginTop="10dp"
+				    android:id="@+id/chart4">
+				    
+				</cn.net_show.doctor.widget.CustomerChart>
+				<!-- <include layout="@layout/chartview"/> -->
 				<!-- <LinearLayout android:layout_width="match_parent"
 				    android:layout_height="wrap_content"
 				    android:layout_marginTop="10dp"
@@ -276,7 +304,7 @@
 	                android:minHeight="160dp"/>
  -->
             </LinearLayout>
-        </ScrollView>
+        </mark.widget.MyScrollView>
     </RelativeLayout>
 
 </LinearLayout>

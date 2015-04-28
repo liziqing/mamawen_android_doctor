@@ -7,10 +7,8 @@
 package cn.net_show.doctor.adapter;
 
 import java.util.ArrayList;
-
-import mark.utils.DateFormat;
 import cn.net_show.doctor.R;
-import cn.net_show.doctor.model.DataRecordItem;
+import cn.net_show.doctor.model.FriendsRecord;
 import android.content.Context;
 import android.view.Gravity;
 import android.view.View;
@@ -27,7 +25,7 @@ import android.widget.TextView;
  */
 public class DataRecordAdapter extends BaseAdapter {
 
-	private ArrayList<DataRecordItem> mList;
+	private ArrayList<FriendsRecord> mList;
 	private Context mContext;
 
 	private AbsListView.LayoutParams lp;
@@ -37,7 +35,7 @@ public class DataRecordAdapter extends BaseAdapter {
 	 * @param mList
 	 * @param mContext
 	 */
-	public DataRecordAdapter(ArrayList<DataRecordItem> list, Context context) {
+	public DataRecordAdapter(ArrayList<FriendsRecord> list, Context context) {
 		super();
 		this.mList = list;
 		this.mContext = context;
@@ -93,10 +91,10 @@ public class DataRecordAdapter extends BaseAdapter {
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		DataRecordItem item = mList.get(position);
+		FriendsRecord item = mList.get(position);
 
-		holder.name.setText(item.name);
-		holder.time.setText(DateFormat.getFriendlyTimeString(item.time));
+		holder.name.setText(item.friend.name);
+		holder.time.setText(item.lastRecord.updatedTime);
 
 		return convertView;
 	}

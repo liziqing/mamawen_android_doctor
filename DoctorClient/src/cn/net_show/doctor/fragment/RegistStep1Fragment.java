@@ -65,8 +65,7 @@ public class RegistStep1Fragment extends Fragment implements
 			}
 			password = edt_passwd1.getText().toString();
 			if (password.length() < 1) {
-				Toast.makeText(getActivity(), "请输入密码！", Toast.LENGTH_SHORT)
-						.show();
+				Toast.makeText(getActivity(), "请输入密码！", Toast.LENGTH_SHORT).show();
 				break;
 			}
 			if (password.equals(edt_passwd2.getText().toString())) {

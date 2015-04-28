@@ -113,6 +113,9 @@ public class PullDownScrollView extends LinearLayout {
      */
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
+    	if(!isHandled(ev)){
+    		return super.onInterceptTouchEvent(ev);
+    	}
         Logger.d(TAG, "onInterceptTouchEvent");
         printMotionEvent(ev);
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
@@ -136,6 +139,32 @@ public class PullDownScrollView extends LinearLayout {
         return super.onInterceptTouchEvent(ev);
     }
 
+    float lastX,lastY;
+	public boolean isHandled(MotionEvent ev) {
+		// TODO Auto-generated method stub
+		float x = ev.getX();
+		float y = ev.getY();
+		switch(ev.getAction()){
+		case MotionEvent.ACTION_DOWN:
+			
+			break;
+		case MotionEvent.ACTION_MOVE:
+			if(Math.abs(x-lastX)<Math.abs(y-lastY)){
+				return true;
+			}else{
+				return false;
+			}
+		case MotionEvent.ACTION_UP:
+			
+			break;
+		
+		}
+		lastX = x;
+		lastY = y;
+		return true;
+	}
+
+    
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Logger.d(TAG, "onTouchEvent");

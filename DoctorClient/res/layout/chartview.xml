@@ -9,6 +9,8 @@
 		android:layout_height="wrap_content"
 		android:padding="20dp"
 		android:text="体重"
+		android:textSize="18sp"
+		android:textColor="@color/white"
 		android:id="@+id/chart_title"
 		android:gravity="center"/>
     <mark.widget.MoveableChart 

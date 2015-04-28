@@ -15,6 +15,43 @@
 # If your project uses WebView with JS, uncomment the following
 # and specify the fully qualified class name to the JavaScript interface
 # class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
+-dontoptimize
+-dontwarn com.**
+-dontwarn org.**
+-dontwarn de.**
+-dontwarn android.**
+-keepattributes Signature 
+# Gson specific classes 
+-keep class sun.misc.Unsafe { *; } 
+#-keep class com.google.gson.stream.** { *; } 
+
+-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+   public *;
+}
+-keep class cn.net_show.doctor.model.*{
+	*;
+}
+-keep class cn.net_show.doctor.model.database.*{
+	*;
+}
+-keep class android.**{
+	*;
+}
+
+-keep class org.**{
+	*;
+}
+-keep class com.**{
+	*;
+}
+-keep class de.**{
+	*;
+}
+#-keep class cn.net_show.doctor.utils.JsonUtils{
+#	*;
 #}
+#-keep class * extends com.google.gson.reflect.TypeToken{
+# 	*;
+#}
+
+
